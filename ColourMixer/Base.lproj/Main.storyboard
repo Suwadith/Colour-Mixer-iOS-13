@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,94 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ColourMixer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Colour Mixer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouj-BO-Uv7">
+                                <rect key="frame" x="130.5" y="81.5" width="153" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8y-R5-wea">
+                                <rect key="frame" x="192" y="155" width="30" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="nyx-q4-KBW">
+                                <rect key="frame" x="18" y="186" width="378" height="31"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9H7-Oc-Q1w">
+                                <rect key="frame" x="184" y="236" width="46.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="Y4Z-dL-42F">
+                                <rect key="frame" x="18" y="267" width="378" height="31"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9Q-sV-JLm">
+                                <rect key="frame" x="190" y="317" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="tjN-pl-qbm">
+                                <rect key="frame" x="18" y="348" width="378" height="31"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </slider>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MEa-p5-RBt">
+                                <rect key="frame" x="20" y="418" width="374" height="444"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cQu-51-DR9">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="444"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="f9Q-sV-JLm" firstAttribute="top" secondItem="Y4Z-dL-42F" secondAttribute="bottom" constant="20" id="0yz-zS-fep"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Y4Z-dL-42F" secondAttribute="trailing" constant="20" id="6He-LK-ebF"/>
+                            <constraint firstItem="Y4Z-dL-42F" firstAttribute="top" secondItem="9H7-Oc-Q1w" secondAttribute="bottom" constant="10" id="AcL-jI-00r"/>
+                            <constraint firstItem="nyx-q4-KBW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EZ9-5q-kwu"/>
+                            <constraint firstItem="Y4Z-dL-42F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="HYU-DC-idU"/>
+                            <constraint firstItem="Y4Z-dL-42F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Llb-df-lpu"/>
+                            <constraint firstItem="9H7-Oc-Q1w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ogw-qE-0q4"/>
+                            <constraint firstItem="MEa-p5-RBt" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="QRN-Ty-Pac"/>
+                            <constraint firstItem="nyx-q4-KBW" firstAttribute="top" secondItem="p8y-R5-wea" secondAttribute="bottom" constant="10" id="XWn-qL-8sg"/>
+                            <constraint firstItem="p8y-R5-wea" firstAttribute="top" secondItem="ouj-BO-Uv7" secondAttribute="bottom" constant="40" id="ZTU-Gl-kkv"/>
+                            <constraint firstItem="tjN-pl-qbm" firstAttribute="top" secondItem="f9Q-sV-JLm" secondAttribute="bottom" constant="10" id="cPk-O1-CIv"/>
+                            <constraint firstItem="ouj-BO-Uv7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-350" id="cua-O5-bye"/>
+                            <constraint firstItem="MEa-p5-RBt" firstAttribute="top" secondItem="tjN-pl-qbm" secondAttribute="bottom" constant="40" id="fWP-dn-hhF"/>
+                            <constraint firstItem="MEa-p5-RBt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gXT-vp-Vmc"/>
+                            <constraint firstItem="MEa-p5-RBt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="iBf-Dk-l3P"/>
+                            <constraint firstItem="tjN-pl-qbm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kBu-yu-rM3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MEa-p5-RBt" secondAttribute="trailing" constant="20" id="mwZ-zR-rKb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tjN-pl-qbm" secondAttribute="trailing" constant="20" id="nWO-H6-X3L"/>
+                            <constraint firstItem="ouj-BO-Uv7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oKC-ib-63y"/>
+                            <constraint firstItem="nyx-q4-KBW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="p6n-mT-xpa"/>
+                            <constraint firstItem="f9Q-sV-JLm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qqU-Gl-a8p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nyx-q4-KBW" secondAttribute="trailing" constant="20" id="rp8-2I-mfB"/>
+                            <constraint firstItem="p8y-R5-wea" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w1i-ng-2VT"/>
+                            <constraint firstItem="9H7-Oc-Q1w" firstAttribute="top" secondItem="nyx-q4-KBW" secondAttribute="bottom" constant="20" id="wLf-ri-PvX"/>
+                            <constraint firstItem="tjN-pl-qbm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ygM-fl-a0g"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="133" y="139"/>
         </scene>
     </scenes>
 </document>
