@@ -24,20 +24,31 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var colorPalette: UIView!
     
+    var red: CGFloat = 0
+    var green: CGFloat = 0
+    var blue: CGFloat = 0
+    
     
     @IBAction func redSlider(_ sender: UISlider) {
         redLevel.text = String(Int(sender.value))
-//        colorPalette.backgroundColor = UIColor(red: CGFloat(sender.value), green: 0.0, blue: 0.0, alpha: 1.0)
+        red = CGFloat(sender.value)
+        changeColour()
     }
     
     @IBAction func greenSlider(_ sender: UISlider) {
         greenLevel.text = String(Int(sender.value))
-//        colorPalette.backgroundColor = UIColor.green.withAlphaComponent(CGFloat(sender.value))
+        green = CGFloat(sender.value)
+        changeColour()
     }
     
     @IBAction func blueSlider(_ sender: UISlider) {
         blueLevel.text = String(Int(sender.value))
-//        colorPalette.backgroundColor = UIColor.blue.withAlphaComponent(CGFloat(sender.value))
+        green = CGFloat(sender.value)
+        changeColour()
+    }
+    
+    func changeColour() {
+        colorPalette.backgroundColor = UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 1.0)
     }
     
     

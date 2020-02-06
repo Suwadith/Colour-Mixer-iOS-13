@@ -105,6 +105,7 @@
                     </view>
                     <connections>
                         <outlet property="blueLevel" destination="f9Q-sV-JLm" id="tda-4E-rAI"/>
+                        <outlet property="colorPalette" destination="MEa-p5-RBt" id="6to-EY-MUh"/>
                         <outlet property="greenLevel" destination="9H7-Oc-Q1w" id="uWZ-Q3-9yt"/>
                         <outlet property="redLevel" destination="p8y-R5-wea" id="bqC-Bz-AQs"/>
                     </connections>
