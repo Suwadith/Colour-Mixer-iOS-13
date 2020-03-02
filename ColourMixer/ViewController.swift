@@ -43,7 +43,7 @@ class ViewController: UIViewController {
     
     @IBAction func blueSlider(_ sender: UISlider) {
         blueLevel.text = String(Int(sender.value))
-        green = CGFloat(sender.value)
+        blue = CGFloat(sender.value)
         changeColour()
     }
     
